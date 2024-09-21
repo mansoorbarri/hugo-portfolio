@@ -1,0 +1,38 @@
+baseURL = "https://cshugo.mansoorbarri.com"
+languageCode = "en-us"
+theme = "hugo-portfolio"
+
+[Params]
+    title = "Forest" 
+    description = "Software Engineer & Web Developer"
+    favicon = ""
+    heroMessage = """
+    I'm an indie full-stack developer and content creator building my version of the digital world
+    one step at a time. All coding projects are built from the ground up, from planning and
+    designing all the way to solving real-life problems with code.
+    All video content is built the same way, from ideation and planning, all the way to finalizing
+    the content with artistic touches. I publish that content on my YouTube channel <a
+    href="">ForrestKnight</a> to more than 400k subscribers.
+    """ 
+
+    contactPlaceholderName = "Name"
+    contactPlaceholderEmail = "Email"
+    contactPlaceholderMessage = "Message"
+    contactButtonText = "Work with me"
+    contactSuccessMessage = "Thank you for reaching out! We'll get back to you soon."
+
+
+
+projects = [
+    {title = "JS Converter", image = "/images/JS-Converters.png", url = "https://example.com", tags = ["HTML", "CSS", "JavaScript"]},
+    {title = "Chatbot", image = "/images/chatbot.png", url = "https://example.com", tags = ["HTML", "CSS", "JavaScript"]},
+    {title = "Jewellery", image = "/images/Jewellery.png", url = "https://example.com", tags = ["HTML", "CSS", "JavaScript"]},
+]
+
+timeline = [
+    {startDate = "Today", brief = "YouTube Content Creator", duration = "6 Years", description = "My humble attempt at building my version of the digital world one step at a time by documenting my coding journey and creating software engineering and computer science content to help those coming behind me."},
+    {startDate = "Today", brief = "Solo Indie Developer", duration = "4 Years", description = "I'm a solo indie developer building software for myself and clients to showcase on YouTube. All coding projects are built from the ground up, from planning and designing all the way to solving real-life problems with code."},
+    {startDate = "2019", brief = "Software Engineer", duration = "2 Years", description = "I helped build an enterprise application for a Fortune 500 company in an Agile team setting. Our tech stack consisted of TypeSciprt, Angular, Java, Gradle, and a handful of other languages and tools."},
+    {startDate = "2018", brief = "Bachelor's Degree in Computer Science", duration = "5 Years", description = "I pursued the knowledge that a computer science degree had to offer. I learned about computer architecture, computer science theory, an array of programming, and aspects of artificial intelligence."},
+    {startDate = "2013", brief = "First Line of Code", duration = "The Beginning", description = "I wrote my first line of real code that started this journey into digital craftsmanship that I never could've imagined, especially as someone who never saw themselves as anything other than a blue collar worker."},
+]

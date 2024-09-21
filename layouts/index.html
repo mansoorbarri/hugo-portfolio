@@ -1,0 +1,93 @@
+
+{{ define "main" }}
+   
+    <!-- Section1 -->
+    <div>
+        <div class="container-fluid">
+            <div class="heading">
+                <div>
+                    <h1 class="heading1">{{ .Site.Params.title }}</h1>
+                </div>
+                <div>
+                    <h5 class="heading2">{{ .Site.Params.description }}</h5>
+                </div>
+                <div class="heading3">
+                    <p>
+                        {{ .Site.Params.heroMessage | safeHTML }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section2 portion -->
+    <div>
+        <div class="container portionmain">
+            {{ if isset .Site.Params "projects" }}
+            <div class="row">
+                    {{ partial "list.html" . }}
+            </div>    
+            {{ end }}
+        </div>
+    </div>
+        
+    
+    <br>
+
+    <!-- Section3 Timeline -->
+    <div>
+        {{ if isset .Site.Params "timeline" }}
+        <div class="container-fluid timelinemain">
+            <div class="col-md-12">
+                <div class="timeline">
+                    <h3 class="timelinehead">Timeline</h3>
+
+                    {{ range .Site.Params.timeline }}
+                    <div>
+                        <div class="timelineborder">
+                            <div class="timeline0">
+                                <div class="timeline1">
+                                    <p>{{ .startDate}}</p>
+                                </div>
+                                <div class="timeline2">
+                                    <p><b>{{ .brief }}</b></p>
+                                </div>
+                                <div class="timeline3">
+                                    <p>{{ .duration }}</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="timeline4">{{ .description}}</p>
+                        </div>
+                        <br>
+                    </div>
+                    <br>
+                    {{ end }}
+                    <br>
+                    
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+    <!-- Section4 Contact -->
+    <div>
+        <div class="container-fluid contactmain">
+            <div class="col-md-12">
+                <div class="contact">
+                    <h3 class="contacthead">Contact</h3>
+                    <form class="">
+                        <input type="text" class="form-control mb-2 contactinput" id="exampleFormControlInput1"
+                            placeholder="{{ .Site.Params.contactPlaceholderName }}">
+                        <input type="Email" class="form-control mb-2" id="exampleFormControlInput1" placeholder="{{ .Site.Params.contactPlaceholderEmail }}">
+                        <textarea class="form-control mb-2" id="exampleFormControlTextarea1" placeholder="{{ .Site.Params.contactPlaceholderMessage }}"
+                            rows="11"></textarea>
+                        <button class="btn contactbtn"><a href="">{{ .Site.Params.contactButtonText }}</a></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+{{ end }}
